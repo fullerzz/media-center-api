@@ -46,7 +46,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Upload Artifact to S3
-      working-directory: ${{ env.application_folder }}/target
+      working-directory: target
       run: aws s3 cp *.jar s3://${{ env.S3BUCKET }}/
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
