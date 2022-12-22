@@ -10,4 +10,5 @@ public class MediaCenterController {
     public String index() {
         return "Spring Boot is running";
     }
+
 }
