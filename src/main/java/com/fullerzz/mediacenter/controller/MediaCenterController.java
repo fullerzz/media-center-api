@@ -17,7 +17,7 @@ public class MediaCenterController {
         return "Spring Boot is running";
     }
 
-    @PostMapping
+    @PostMapping("/upload")
     public String uploadTest() {
         try {
             s3UploaderService.uploadFile();
