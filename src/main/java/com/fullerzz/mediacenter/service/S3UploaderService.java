@@ -15,7 +15,7 @@ public class S3UploaderService {
     private static final String S3_BUCKET_NAME = "fullerzz-media";
 
     public String uploadFile() {
-        Region region = Region.US_EAST_1;
+        Region region = Region.US_WEST_1;
         S3Client s3 = S3Client.builder().region(region).build();
         log.info("S3 Client created");
 
