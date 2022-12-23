@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MediaCenterController {
 
     @Autowired
-    S3UploaderService s3UploaderService;
+    private S3UploaderService s3UploaderService;
 
     @GetMapping("/")
     public String index() {
@@ -19,12 +19,7 @@ public class MediaCenterController {
 
     @PostMapping("/upload")
     public String uploadTest() {
-        try {
-            s3UploaderService.uploadFile();
-            return "That may have worked...";
-        } catch (Exception ex) {
-            return "That didn't work...";
-        }
+        return s3UploaderService.uploadFile();
     }
 
 }
